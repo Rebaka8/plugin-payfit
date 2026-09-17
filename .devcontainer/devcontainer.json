@@ -1,10 +1,10 @@
 {
-  "name": "plugin-template",
+  "name": "plugin-payfit",
   "build": {
     "context": ".",
     "dockerfile": "Dockerfile"
   },
-  "workspaceFolder": "/workspaces/plugin-template",
+  "workspaceFolder": "/workspaces/plugin-payfit",
   "forwardPorts": [8080],
   "customizations": {
     "vscode": {
