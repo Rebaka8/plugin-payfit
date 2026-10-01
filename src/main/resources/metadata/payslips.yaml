@@ -1,0 +1,8 @@
+group: io.kestra.plugin.payfit.payslips
+name: "payslips"
+title: "PayFit Payslips"
+description: "List collaborator payslips and download one as a PDF"
+body: "List payslips for a collaborator, then download one payslip. Download stores the PDF returned by PayFit. Requires the contracts:payslips:read scope."
+videos: []
+createdBy: "Kestra Core Team"
+managedBy: "Kestra Core Team"
