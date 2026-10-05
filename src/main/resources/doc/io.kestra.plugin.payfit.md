@@ -19,6 +19,7 @@ Scopes follow the PayFit documentation. Collaborator reads need `collaborators:r
 | `auth.Introspect` | `POST https://oauth.payfit.com/introspect` |
 | `auth.AccessToken` | `POST https://oauth.payfit.com/token` |
 | `company.Get` | `GET /companies/{companyId}` |
+| `company.GetPayrollStatus` | `GET /companies/{companyId}/payroll-status?date=YYYYMM` |
 | `collaborators.List` | `GET /companies/{companyId}/collaborators` |
 | `collaborators.Get` | `GET /companies/{companyId}/collaborators/{collaboratorId}` |
 | `collaborators.Create` | `POST /companies/{companyId}/collaborators` |
@@ -31,6 +32,8 @@ Scopes follow the PayFit documentation. Collaborator reads need `collaborators:r
 | `payslips.List` | `GET /companies/{companyId}/collaborators/{collaboratorId}/payslips` |
 | `accounting.Export` | `GET /companies/{companyId}/accounting-v2?date=YYYYMM` |
 | `payslips.Download` | `GET /companies/{companyId}/collaborators/{collaboratorId}/contracts/{contractId}/payslips/{payslipId}` |
+
+`company.GetPayrollStatus` checks whether the payroll for a period has finished and uses the same `YYYYMM` period format as `accounting.Export`; `completed` is a convenience flag indicating whether the payroll is complete.
 
 List tasks follow `nextPageToken` until the API is exhausted. PayFit allows at most 50 items per page. `maxPages` defaults to 100 and, when reached, the output keeps the next token so a later task can resume. `fetchType` controls the result: `FETCH` returns the rows, `FETCH_ONE` returns the first row, `STORE` writes an ION file, and `NONE` returns only the count.
 
